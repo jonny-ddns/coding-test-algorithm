@@ -1,4 +1,4 @@
-package level01.수박수박;
+package codingTest_lv01.수박수박;
 //2021.06.04
 class Solution {
     public String solution(int n) {

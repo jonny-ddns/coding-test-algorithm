@@ -1,4 +1,4 @@
-package level01.완주하지못한선수;
+package codingTest_lv01.완주하지못한선수;
 
 import java.util.HashMap;
 import java.util.Map;

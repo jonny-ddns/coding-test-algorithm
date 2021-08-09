@@ -1,4 +1,4 @@
-package level01.시저암호;
+package codingTest_lv01.시저암호;
 //2021.05.27
 class Solution {
     public String solution(String s, int n) {

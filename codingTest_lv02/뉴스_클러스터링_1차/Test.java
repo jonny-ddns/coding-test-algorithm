@@ -1,4 +1,4 @@
-package level02.뉴스_클러스터링_1차;
+package codingTest_lv02.뉴스_클러스터링_1차;
 
 public class Test {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package level01.K번째수;
+package codingTest_lv01.K번째수;
 //2021.05.07
 class Solution {
     public int[] solution(int[] array, int[][] commands) {

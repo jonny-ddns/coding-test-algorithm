@@ -1,4 +1,4 @@
-package level01.핸드폰번호가리기;
+package codingTest_lv01.핸드폰번호가리기;
 
 public class Test {
 	public static void main(String[] args) {

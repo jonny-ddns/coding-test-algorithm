@@ -1,4 +1,4 @@
-package level01.폰켓몬;
+package codingTest_lv01.폰켓몬;
 
 public class Test {
 	public static void main(String[] args) {

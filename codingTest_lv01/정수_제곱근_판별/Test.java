@@ -1,4 +1,4 @@
-package level01.정수_제곱근_판별;
+package codingTest_lv01.정수_제곱근_판별;
 
 
 public class Test {

@@ -1,4 +1,4 @@
-package level01.Çà·ÄÀÇµ¡¼À;
+package codingTest_lv01.Çà·ÄÀÇµ¡¼À;
 //2021.06.04
 class Solution {
     public int[][] solution(int[][] arr1, int[][] arr2) {    	

@@ -1,4 +1,4 @@
-package level01.모의고사;
+package codingTest_lv01.모의고사;
 /*
  * 수포자가 찍는 방식 패턴화
  * 정답과 찍은문제 비교해서 일치하면 count++

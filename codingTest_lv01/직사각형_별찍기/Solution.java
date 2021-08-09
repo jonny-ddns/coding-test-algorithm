@@ -1,4 +1,4 @@
-package level01.직사각형_별찍기;
+package codingTest_lv01.직사각형_별찍기;
 //2021.05.29
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package level01._2016년;
+package codingTest_lv01._2016년;
 //2021.06.05
 /*
  * 요일 계산하기

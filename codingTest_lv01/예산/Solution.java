@@ -1,4 +1,4 @@
-package level01.예산;
+package codingTest_lv01.예산;
 //2021.05.29
 class Solution {
 	public int solution(int[] d, int budget) {

@@ -1,4 +1,4 @@
-package level01.자연수_뒤집어_배열로_만들기;
+package codingTest_lv01.자연수_뒤집어_배열로_만들기;
 
 public class Test {
 	public static void main(String[] args) {

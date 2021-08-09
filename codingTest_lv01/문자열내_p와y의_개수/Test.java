@@ -1,4 +1,4 @@
-package level01.문자열내_p와y의_개수;
+package codingTest_lv01.문자열내_p와y의_개수;
 
 public class Test {
 	public static void main(String[] args) {

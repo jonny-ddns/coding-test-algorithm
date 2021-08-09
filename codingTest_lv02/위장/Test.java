@@ -1,4 +1,4 @@
-package level02.위장;
+package codingTest_lv02.위장;
 
 public class Test {
 	public static void main(String[] args) {

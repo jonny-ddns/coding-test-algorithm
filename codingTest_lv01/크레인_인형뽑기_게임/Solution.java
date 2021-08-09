@@ -1,4 +1,4 @@
-package level01.크레인_인형뽑기_게임;
+package codingTest_lv01.크레인_인형뽑기_게임;
 //2021.06.16
 
 import java.util.LinkedList;

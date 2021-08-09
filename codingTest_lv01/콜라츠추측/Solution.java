@@ -1,4 +1,4 @@
-package level01.콜라츠추측;
+package codingTest_lv01.콜라츠추측;
 
 class Solution {
     public int solution(int num) {

@@ -1,4 +1,4 @@
-package level01.모의고사;
+package codingTest_lv01.모의고사;
 
 public class Test {
 	public static void main(String[] args) {

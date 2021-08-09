@@ -1,4 +1,4 @@
-package level01.제일작은수_제거하기;
+package codingTest_lv01.제일작은수_제거하기;
 //2021.06.04
 //시스템 오류인듯
 class Solution {

@@ -1,4 +1,4 @@
-package level01.가운데글자가져오기;
+package codingTest_lv01.가운데글자가져오기;
 
 public class Test {
 

@@ -1,4 +1,4 @@
-package level01.약수의합;
+package codingTest_lv01.약수의합;
 //2021.05.28
 class Solution {
     public int solution(int n) {

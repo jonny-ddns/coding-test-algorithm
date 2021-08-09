@@ -1,4 +1,4 @@
-package level01.약수의합;
+package codingTest_lv01.약수의합;
 
 public class Test {
 	public static void main(String[] args) {

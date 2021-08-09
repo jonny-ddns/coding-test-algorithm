@@ -1,4 +1,4 @@
-package level01.ÇÏ»þµå¼ö;
+package codingTest_lv01.ÇÏ»þµå¼ö;
 //2021.06.04
 class Solution {
     public boolean solution(int x) {

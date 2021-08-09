@@ -1,4 +1,4 @@
-package level01.정수_제곱근_판별;
+package codingTest_lv01.정수_제곱근_판별;
 //2021.06.04
 class Solution {
     public long solution(long n) {

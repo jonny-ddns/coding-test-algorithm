@@ -1,4 +1,4 @@
-package level02.피보나치수;
+package codingTest_lv02.피보나치수;
 //2021.06.08
 class Solution {
     public int solution(int n) {

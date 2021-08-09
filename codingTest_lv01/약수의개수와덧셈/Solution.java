@@ -1,4 +1,4 @@
-package level01.약수의개수와덧셈;
+package codingTest_lv01.약수의개수와덧셈;
 
 /*
  * 약수의 개수 구하기 

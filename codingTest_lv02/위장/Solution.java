@@ -1,4 +1,4 @@
-package level02.위장;
+package codingTest_lv02.위장;
 //2021.05.28
 
 /*

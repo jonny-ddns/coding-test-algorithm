@@ -1,4 +1,4 @@
-package level01.정수_내림차순으로_배치하기;
+package codingTest_lv01.정수_내림차순으로_배치하기;
 
 public class Test {
 	public static void main(String[] args) {

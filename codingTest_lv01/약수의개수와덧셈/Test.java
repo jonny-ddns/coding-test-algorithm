@@ -1,4 +1,4 @@
-package level01.¾à¼öÀÇ°³¼ö¿Íµ¡¼À;
+package codingTest_lv01.¾à¼öÀÇ°³¼ö¿Íµ¡¼À;
 
 public class Test {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package level01._2016³â;
+package codingTest_lv01._2016³â;
 
 public class Test {
 	public static void main(String[] args) {

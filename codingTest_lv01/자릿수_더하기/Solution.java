@@ -1,4 +1,4 @@
-package level01.자릿수_더하기;
+package codingTest_lv01.자릿수_더하기;
 //2021.06.04
 public class Solution {
     public int solution(int n) {

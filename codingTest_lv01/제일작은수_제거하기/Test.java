@@ -1,4 +1,4 @@
-package level01.제일작은수_제거하기;
+package codingTest_lv01.제일작은수_제거하기;
 
 public class Test {
 	public static void main(String[] args) {

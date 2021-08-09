@@ -1,4 +1,4 @@
-package level01.크레인_인형뽑기_게임;
+package codingTest_lv01.크레인_인형뽑기_게임;
 
 public class Test {
     public static void main(String[] args) {

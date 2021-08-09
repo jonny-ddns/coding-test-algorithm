@@ -1,4 +1,4 @@
-package level01._3진법뒤집기;
+package codingTest_lv01._3진법뒤집기;
 //2021.05.28
 
 import java.util.ArrayList;

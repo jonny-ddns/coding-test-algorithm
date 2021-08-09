@@ -1,4 +1,4 @@
-package level01.x만큼_간격이있는_n개의숫자;
+package codingTest_lv01.x만큼_간격이있는_n개의숫자;
 //2021.06.04
 class Solution {
     public long[] solution(int x, int n) {

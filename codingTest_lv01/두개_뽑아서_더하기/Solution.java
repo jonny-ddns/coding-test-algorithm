@@ -1,4 +1,4 @@
-package level01.두개_뽑아서_더하기;
+package codingTest_lv01.두개_뽑아서_더하기;
 //2021.06.05
 
 import java.util.Set;

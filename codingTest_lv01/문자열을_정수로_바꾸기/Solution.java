@@ -1,4 +1,4 @@
-package level01.문자열을_정수로_바꾸기;
+package codingTest_lv01.문자열을_정수로_바꾸기;
 //2021.06.04
 class Solution {
     public int solution(String s) {

@@ -1,4 +1,4 @@
-package level01.로또의_최고순위와_최저순위;
+package codingTest_lv01.로또의_최고순위와_최저순위;
 //2021.05.27
 
 class Solution {

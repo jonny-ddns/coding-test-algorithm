@@ -1,4 +1,4 @@
-package level01.ÇÏ»þµå¼ö;
+package codingTest_lv01.ÇÏ»þµå¼ö;
 
 public class Test {
 	public static void main(String[] args) {

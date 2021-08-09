@@ -1,4 +1,4 @@
-package level02.멀쩡한_사각형;
+package codingTest_lv02.멀쩡한_사각형;
 //2021.06.12
 /*
 가로 20, 세로 2라면

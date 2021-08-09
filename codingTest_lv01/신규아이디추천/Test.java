@@ -1,4 +1,4 @@
-package level01.신규아이디추천;
+package codingTest_lv01.신규아이디추천;
 
 public class Test {
 	public static void main(String[] args) {

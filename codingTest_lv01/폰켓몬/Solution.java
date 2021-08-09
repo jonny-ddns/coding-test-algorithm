@@ -1,4 +1,4 @@
-package level01.폰켓몬;
+package codingTest_lv01.폰켓몬;
 //2021.06.02
 import java.util.HashSet;
 import java.util.Set;

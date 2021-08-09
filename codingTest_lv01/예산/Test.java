@@ -1,4 +1,4 @@
-package level01.예산;
+package codingTest_lv01.예산;
 
 public class Test {
 	public static void main(String[] args) {

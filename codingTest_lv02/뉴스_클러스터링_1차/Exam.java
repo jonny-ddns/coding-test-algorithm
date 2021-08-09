@@ -1,4 +1,4 @@
-package level02.뉴스_클러스터링_1차;
+package codingTest_lv02.뉴스_클러스터링_1차;
 //2021.06.16
 import java.util.ArrayList;
 import java.util.List;
