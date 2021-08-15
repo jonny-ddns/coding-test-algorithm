@@ -1,4 +1,4 @@
-package unsolved.최대공약수와최소공배수;
+package unsolved.lv01_최대공약수와최소공배수;
 
 class Solution {
     public int[] solution(int n, int m) {

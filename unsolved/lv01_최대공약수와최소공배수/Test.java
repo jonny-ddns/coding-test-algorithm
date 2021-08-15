@@ -1,4 +1,4 @@
-package unsolved.최대공약수와최소공배수;
+package unsolved.lv01_최대공약수와최소공배수;
 
 public class Test {
 	public static void main(String[] args) {

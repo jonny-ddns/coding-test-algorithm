@@ -1,4 +1,4 @@
-package unsolved.lv01_같은_숫자는_싫어;
+package codingTest_lv01.같은_숫자는_싫어;
 
 public class Test {
 	public static void main(String[] args) {
