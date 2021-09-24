@@ -1,4 +1,4 @@
-package baekjoon_online_judge.ex03;
+package baekjoon_online_judge.q2805_나무자르기;
 
 public class Test {
     public static void main(String[] args) {

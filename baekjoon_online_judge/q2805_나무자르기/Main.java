@@ -1,4 +1,4 @@
-package baekjoon_online_judge.ex02;
+package baekjoon_online_judge.q2805_나무자르기;
 
 //나무자르기
 //https://www.acmicpc.net/problem/2805
