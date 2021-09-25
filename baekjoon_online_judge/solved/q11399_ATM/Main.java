@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q11399_ATM;
+package baekjoon_online_judge.solved.q11399_ATM;
 
 import java.io.*;
 
