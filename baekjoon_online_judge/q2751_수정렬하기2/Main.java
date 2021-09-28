@@ -1,18 +1,13 @@
-package baekjoon_online_judge.q1463_1로만들기;
+package baekjoon_online_judge.q2751_수정렬하기2;
 
 import java.io.*;
 
-//https://freedeveloper.tistory.com/276
-/*
-    X가 3으로 나누어 떨어지면, 3으로 나눈다.
-    X가 2로 나누어 떨어지면, 2로 나눈다.
-    1을 뺀다.
- */
 public class Main {
     public static void main(String[] args) {
         new Solution();
     }
 
+    //중첩클래스
     static class Solution {
         private Reader reader;
         private Writer writer;
@@ -27,8 +22,16 @@ public class Main {
         //입출력
         private void execute() {
             try{
-                int result = calculate( bufferedReader.readLine().trim() );
-                bufferedWriter.write(Integer.toString(result));
+                int count = Integer.parseInt(bufferedReader.readLine());
+                int[] numbers = new int[count];
+                int i;
+                for (i = 0; i < count; i++) {
+                    calculate(numbers, i, bufferedReader.readLine().trim());
+                }
+                for (int result : numbers) {
+                    bufferedWriter.write(Integer.toString(result));
+                    bufferedWriter.write( "\n" );
+                }
                 bufferedWriter.flush();
             } catch (IOException ignored){
             } finally {
@@ -40,33 +43,17 @@ public class Main {
         }
 
         //연산
-        private int calculate(String str){
-            int number = Integer.parseInt(str);
-
-            int result = 0;
-            int count = 0;
-            while(number!=1){
-                number = repetition(number);
-                System.out.println("number = "+ number);
-                count++;
+        private void calculate(int[] numbers, int count, String str){
+            int n = Integer.parseInt(str);
+            for (int i = 0; i <= count; i++) {
+                if(n < numbers[i]){
+                    numbers[i] = n;
+                    break;
+                }
+                if(i == count){
+                    numbers[i] = n;
+                }
             }
-            System.out.println("count = " + count);
-            return result;
-        }
-
-        private int repetition(int number){
-            System.out.print("number = "+ number);
-            System.out.print(" | ");
-            if(number % 3 == 0){
-                return number / 3;
-            }
-            if(number % 2 == 0){
-                return number / 2;
-            }
-            if(number > 2){
-                return --number;
-            }
-            return 1;
         }
 
         /*---------------------------------------------*/
