@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q4659_비밀번호발음하기.q9012_괄호;
+package baekjoon_online_judge.q4659_비밀번호발음하기;
 
 import java.io.*;
 import java.util.ArrayList;

@@ -22,16 +22,15 @@ public class Main {
         //입출력
         private void execute() {
             try{
-                String[] trees;
                 String[] input = bufferedReader.readLine().split(" ");
                 int count = Integer.parseInt(input[0]);
                 int cost = Integer.parseInt(input[1]);
                 int profit = Integer.parseInt(input[2]);
-                trees = new String[count];
+                String[] trees = new String[count];
 
                 int turn = 0;
                 while(turn < count){
-                    trees[turn++] = bufferedReader.readLine();
+                    trees[turn++] = bufferedReader.readLine().trim();
                 }
                 bufferedWriter.write(
                         Integer.toString(calculate(trees, cost, profit))
@@ -58,6 +57,7 @@ public class Main {
             return max(profitBook);
         }
 
+        //int[] 변환
         private int[] intArray(String[] input){
             int[] result = new int[input.length];
             for (int i = 0; i < input.length; i++) {
@@ -77,21 +77,35 @@ public class Main {
         }
 
         private int makeProfit(int[] trees, int length, int cost, int profit){
-            int costCount = 0;
-            int treeCount = 0;
+            int costCount = 0;  //비용 단위
+            int treeCount = 0;  //잘린 나무개수
+            int caseCutTreeYes;
+            int caseCutTreeNo;
 
+            //나무를 자르는 경우
+            int countPossible;
             for (int tree : trees) {
                 if(tree < length){
                     continue;
                 }
-                int tmp = tree / length;
-                treeCount += tmp;
-                costCount += tmp;
+                countPossible = tree / length;
+                treeCount += countPossible;
+                costCount += countPossible;
                 if (tree % length == 0) {
                     costCount--;
                 }
             }
-            return length * treeCount * profit - costCount * cost;
+            caseCutTreeYes = length * treeCount * profit - costCount * cost;
+
+            //나무를 자르지 않는 경우
+            treeCount = 0;
+            for (int tree : trees) {
+                if(length == tree){
+                    treeCount++;
+                }
+            }
+            caseCutTreeNo = length * treeCount * profit;
+            return Math.max(caseCutTreeYes, caseCutTreeNo);
         }
 
         /*---------------------------------------------*/
