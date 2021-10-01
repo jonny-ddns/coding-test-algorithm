@@ -1,8 +1,6 @@
 package baekjoon_online_judge.unsolved.q2231_분해합;
 
 import java.io.*;
-import java.util.Collection;
-import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -40,21 +38,30 @@ public class Main {
         //연산
         private int solve(String input) {
             int number = Integer.parseInt(input);
-
-            return 0;
-        }
-
-        private void getConstructor(int numbers){
-
-            int count = 0;
-            for(int i=1;i<numbers; i++){
-
+            int index = 0;
+            for (int i = 0; i <= number; i++) {
+                if(isConstructor(number, i)){
+                    index = i;
+                    break;
+                }
             }
+            if(index == number){
+                index = 0;
+            }
+            return index;
         }
 
-
-        private int min(Collection<Integer> collection){
-            return Collections.min(collection);
+        private boolean isConstructor(int number, int candidate){
+            int tmp = candidate;
+            int sum = 0;
+            int remain;
+            while (0 < tmp) {
+                remain = tmp % 10;
+                sum += remain;
+                tmp = tmp / 10;
+            }
+            int result = candidate + sum;
+            return result == number;
         }
 
         /*---------------------------------------------*/

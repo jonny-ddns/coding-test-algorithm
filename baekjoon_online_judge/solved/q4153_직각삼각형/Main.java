@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q4153_Á÷°¢»ï°¢Çü;
+package baekjoon_online_judge.solved.q4153_Á÷°¢»ï°¢Çü;
 
 import java.io.*;
 
