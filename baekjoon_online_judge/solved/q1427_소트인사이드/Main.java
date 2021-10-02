@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q0000_test;
+package baekjoon_online_judge.solved.q1427_소트인사이드;
 
 import java.io.*;
 
@@ -22,7 +22,7 @@ public class Main {
         private void execute() {
             try{
                 String input = bufferedReader.readLine().trim();
-                bufferedWriter.write( Integer.toString(solve(input)) );
+                bufferedWriter.write( solve(input) );
                 bufferedWriter.flush();
             } catch (IOException io){
                 io.printStackTrace();
@@ -36,10 +36,31 @@ public class Main {
         }
 
         //연산
-        private int solve(String input) {
-            return 0;
+        private String solve(String input) {
+            StringBuilder sb = new StringBuilder();
+            int index;
+            int count = input.length();
+            for (int i = 0; i < count; i++) {
+                index = max(input);
+                sb.append(input.charAt(index));
+                input = input.substring(0, index) + input.substring(index + 1);
+            }
+            return sb.toString();
         }
 
+        private int max(String input){
+            int index = 0;
+            int max = 0;
+            int value;
+            for (int i = 0; i < input.length(); i++) {
+                value = Integer.parseInt(input.substring(i, i+1));
+                if(max <= value){
+                    max = value;
+                    index = i;
+                }
+            }
+            return index;
+        }
 
         /*---------------------------------------------*/
         //자원할당

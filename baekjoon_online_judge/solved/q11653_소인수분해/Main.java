@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q0000_test;
+package baekjoon_online_judge.q11653_소인수분해;
 
 import java.io.*;
 
@@ -22,7 +22,7 @@ public class Main {
         private void execute() {
             try{
                 String input = bufferedReader.readLine().trim();
-                bufferedWriter.write( Integer.toString(solve(input)) );
+                bufferedWriter.write( solve(input) );
                 bufferedWriter.flush();
             } catch (IOException io){
                 io.printStackTrace();
@@ -36,10 +36,53 @@ public class Main {
         }
 
         //연산
-        private int solve(String input) {
-            return 0;
+        private String solve(String input) {
+            StringBuilder sb = new StringBuilder();
+            int number = Integer.parseInt(input);
+            int copy = number;
+            int length = copy / 2 + 1;
+            int repetition;
+            int[] result;
+            for (int i = 2; i < length; i++) {
+                result = calculate(copy, i);
+                copy = result[0];
+                repetition = result[1];
+
+                //인수 아님
+                if(repetition == 0){
+                    continue;
+                }
+
+                //문자열 생성
+                int turn = 0;
+                while (turn < repetition) {
+                    sb.append(i).append("\n");
+                    turn++;
+                }
+                //소인수분해 종료
+                if(copy == 1){
+                    break;
+                }
+            }
+            //인수 없음
+            if(sb.length() == 0 && number != 1){
+                sb.append(number);
+            }
+            return sb.toString();
         }
 
+        //x를 y로 나누기 -> 나눈결과, 제곱횟수
+        private int[] calculate(int x, int y){
+            if(x % y != 0){
+                return new int[]{x, 0};
+            }
+            int count = 1;
+            while( x % Math.pow(y, count) == 0 ){
+                count++;
+            }
+            int remain = x / (int) Math.pow(y, --count);
+            return new int[]{remain, count};
+        }
 
         /*---------------------------------------------*/
         //자원할당

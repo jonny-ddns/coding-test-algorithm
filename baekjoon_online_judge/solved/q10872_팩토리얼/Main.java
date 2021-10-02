@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q2581_소수;
+package baekjoon_online_judge.solved.q10872_팩토리얼;
 
 import java.io.*;
 
@@ -21,9 +21,8 @@ public class Main {
         //입출력
         private void execute() {
             try{
-                String M = bufferedReader.readLine().trim();
-                String N = bufferedReader.readLine().trim();
-                bufferedWriter.write( solve(M, N) );
+                String input = bufferedReader.readLine().trim();
+                bufferedWriter.write( Integer.toString(solve(input)) );
                 bufferedWriter.flush();
             } catch (IOException io){
                 io.printStackTrace();
@@ -37,26 +36,15 @@ public class Main {
         }
 
         //연산
-        private String solve(String x, String y) {
-            int start = Integer.parseInt(x);
-            int end = Integer.parseInt(y);
-            return sum(start, end) + "\n" + min(start, end);
+        private int solve(String input) {
+            int number = Integer.parseInt(input);
+            int multi = 1;
+            int turn = 0;
+            while (turn < number) {
+                multi *= ++turn;
+            }
+            return multi;
         }
-        
-        //1. 소수의 합
-        private int sum(int x, int y){
-
-            return 0;
-
-        }
-        
-        
-        
-        //2. 최솟값
-        private int min(int x, int y){
-                     return 0;
-        }
-
 
         /*---------------------------------------------*/
         //자원할당

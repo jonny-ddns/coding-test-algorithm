@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q0000_test;
+package baekjoon_online_judge.unsolved.q10870_피보나치수5;
 
 import java.io.*;
 
@@ -37,6 +37,16 @@ public class Main {
 
         //연산
         private int solve(String input) {
+            int number = Integer.parseInt(input);
+
+            int tmp;
+            for (int i = 1; i < number; i++) {
+                if(i == 0){
+                    return 0;
+                }
+
+            }
+
             return 0;
         }
 

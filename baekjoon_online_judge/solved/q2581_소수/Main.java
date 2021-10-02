@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q0000_test;
+package baekjoon_online_judge.q2581_소수;
 
 import java.io.*;
 
@@ -21,8 +21,9 @@ public class Main {
         //입출력
         private void execute() {
             try{
-                String input = bufferedReader.readLine().trim();
-                bufferedWriter.write( Integer.toString(solve(input)) );
+                int M = Integer.parseInt(bufferedReader.readLine().trim());
+                int N = Integer.parseInt(bufferedReader.readLine().trim());
+                bufferedWriter.write( solve(M, N) );
                 bufferedWriter.flush();
             } catch (IOException io){
                 io.printStackTrace();
@@ -36,10 +37,45 @@ public class Main {
         }
 
         //연산
-        private int solve(String input) {
-            return 0;
+        private String solve(int start, int end) {
+            boolean[] checkResult = new boolean[end - start + 1];
+            for (int i = start; i <= end; i++) {
+                checkResult[i-start] = check(i);
+            }
+
+            int[] result = calculate(checkResult, start);
+            if(result.length == 1){
+                return "-1";
+            }
+            return result[0] + "\n" + result[1];
         }
 
+        private int[] calculate(boolean[] checkResult, int start){
+            int count = 0;
+            int index = 0;
+            int sum = 0;
+            for (int i = checkResult.length - 1; i >= 0; i--) {
+                if (checkResult[i]) {
+                    index = i;
+                    sum += i;
+                    count++;
+                }
+            }
+            if(count == 0){
+                return new int[1];
+            }
+            return new int[]{start * count + sum, start + index};   //소수의합, 최솟값
+        }
+
+        //소수여부
+        private boolean check(int number){
+            for (int i = 2; i < number / 2 + 1; i++) {
+                if(number % i == 0){
+                    return false;
+                }
+            }
+            return number != 1;
+        }
 
         /*---------------------------------------------*/
         //자원할당

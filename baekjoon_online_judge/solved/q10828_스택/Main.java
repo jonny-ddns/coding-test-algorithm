@@ -1,6 +1,7 @@
-package baekjoon_online_judge.q0000_test;
+package baekjoon_online_judge.solved.q10828_스택;
 
 import java.io.*;
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,8 +22,14 @@ public class Main {
         //입출력
         private void execute() {
             try{
-                String input = bufferedReader.readLine().trim();
-                bufferedWriter.write( Integer.toString(solve(input)) );
+                Stack<Integer> stack = new Stack<>();
+                StringBuilder sb = new StringBuilder();
+                int count = Integer.parseInt(bufferedReader.readLine().trim());
+
+                for (int i = 0; i < count; i++) {
+                    solve(stack, sb, bufferedReader.readLine().trim());
+                }
+                bufferedWriter.write( sb.toString() );
                 bufferedWriter.flush();
             } catch (IOException io){
                 io.printStackTrace();
@@ -36,10 +43,37 @@ public class Main {
         }
 
         //연산
-        private int solve(String input) {
-            return 0;
-        }
+        private void solve(Stack<Integer> stack, StringBuilder sb, String input){
+            if(5 < input.length()){
+                stack.push(Integer.parseInt(input.split(" ")[1]));
+                return;
+            }
 
+            int result = -1;
+            switch (input.charAt(0)){
+                case 'p':
+                    if(stack.size() != 0){
+                        result = stack.pop();
+                    }
+                    break;
+                case 's':
+                    result = stack.size();
+                    break;
+                case 'e':
+                    if(stack.isEmpty()){
+                        result = 1;
+                        break;
+                    }
+                    result =  0;
+                    break;
+                case 't':
+                    if(stack.size() != 0){
+                        result = stack.peek();
+                        break;
+                    }
+            }
+            sb.append(result).append("\n");
+        }
 
         /*---------------------------------------------*/
         //자원할당
