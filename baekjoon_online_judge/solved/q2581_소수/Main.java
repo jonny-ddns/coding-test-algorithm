@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q2581_소수;
+package baekjoon_online_judge.solved.q2581_소수;
 
 import java.io.*;
 

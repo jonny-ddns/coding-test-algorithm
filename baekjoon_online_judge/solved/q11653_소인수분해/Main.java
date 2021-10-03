@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q11653_소인수분해;
+package baekjoon_online_judge.solved.q11653_소인수분해;
 
 import java.io.*;
 
