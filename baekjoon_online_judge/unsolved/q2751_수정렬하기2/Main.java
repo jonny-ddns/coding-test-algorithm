@@ -15,8 +15,10 @@ public class Main {
         private BufferedWriter bufferedWriter;
 
         private Solution() {
-            resourceOpen();
-            execute();
+//            resourceOpen();
+//            execute();
+            int t = BSearch(new int[]{1, 3, 5, 7, 8, 9, 12, 20, 33, 44, 55}, 55);
+            System.out.println("t = " + t);
         }
 
         //입출력
@@ -26,10 +28,10 @@ public class Main {
                 int[] numbers = new int[count];
                 int i;
                 for (i = 0; i < count; i++) {
-                    calculate(numbers, i, bufferedReader.readLine().trim());
+                    solve(numbers, i, bufferedReader.readLine().trim());
                 }
-                for (int result : numbers) {
-                    bufferedWriter.write(Integer.toString(result));
+                for (int number : numbers) {
+                    bufferedWriter.write(Integer.toString(number));
                     bufferedWriter.write( "\n" );
                 }
                 bufferedWriter.flush();
@@ -41,10 +43,26 @@ public class Main {
                 }
             }
         }
-
+        //
+        //절반 자르기 > 비교
         //연산
-        private void calculate(int[] numbers, int count, String str){
+        //배열 - 몇번째항목 - 넣을숫자
+        private void solve(int[] numbers, int count, String str){
             int n = Integer.parseInt(str);
+
+            int tmp = count /2;
+//            while(){
+//
+//                if(n < numbers[tmp]){   //넣을숫자가 작다
+//                    tmp = count / 2;    //tmp = 2;
+//                } else {
+//                    tmp = count / 4 * 3;
+//                }
+//            }
+
+            
+            
+            
             for (int i = 0; i <= count; i++) {
                 if(n < numbers[i]){
                     numbers[i] = n;
@@ -54,6 +72,43 @@ public class Main {
                     numbers[i] = n;
                 }
             }
+        }
+
+        int BSearch(int array[], int target) {
+            int low = 0;
+            int high = array.length - 1;
+            int mid;
+
+            while(low <= high) {
+                mid = (low + high) / 2;
+
+                if (array[mid] == target)
+                    return mid;
+                else if (array[mid] > target)
+                    high = mid - 1;
+                else
+                    low = mid + 1;
+            }
+            return -1;
+        }
+
+        //삽입할 인덱스
+        int indexSearch(int array[], int target) {
+            int low = 0;
+            int high = array.length - 1;
+            int mid;
+
+            while(low <= high) {
+                mid = (low + high) / 2;
+
+                if (array[mid] == target)
+                    return mid;
+                else if (array[mid] > target)
+                    high = mid - 1;
+                else
+                    low = mid + 1;
+            }
+            return -1;
         }
 
         /*---------------------------------------------*/

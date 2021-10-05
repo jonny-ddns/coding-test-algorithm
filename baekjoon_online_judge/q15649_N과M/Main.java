@@ -1,4 +1,4 @@
-package baekjoon_online_judge.unsolved.q1003_피보나치함수;
+package baekjoon_online_judge.q15649_N과M;
 
 import java.io.*;
 
@@ -22,50 +22,31 @@ public class Main {
         private void execute() {
             try{
                 StringBuilder sb = new StringBuilder();
-                int count = Integer.parseInt(bufferedReader.readLine());
-                int turn = 0;
-                while(turn < count){
-                    solve(sb, bufferedReader.readLine());
-                    turn++;
-                }
-                bufferedWriter.write(sb.toString());
+                solve(sb, bufferedReader.readLine().trim().split(" "));
+                bufferedWriter.write( sb.toString() );
                 bufferedWriter.flush();
-                sb.setLength(0);
-            } catch (IOException ignored){
+            } catch (IOException io){
+                io.printStackTrace();
             } finally {
                 try {
                     resourceClose();
-                } catch (IOException ignored){
+                } catch (IOException io){
+                    io.printStackTrace();
                 }
             }
         }
 
         //연산
-        private void solve(StringBuilder sb, String input) {
-            int number = Integer.parseInt(input);
-            int[] record = new int[]{0, 0};
-            fibonacci(record, number);
-            sb.append(record[0])
-                .append(" ")
-                .append(record[1])
-                .append("\n");
-        }
 
-        private int fibonacci(int[] record, int n) {
-            if(n < 2){
-                record[n] = record[n] + 1;
-                return n;
-            }
-            int[] array = new int[n + 1];
-            int turn = 0;
-            while(turn < n+1){
-                array[turn++] = -1;
-            }
+        /*
+        만약 5 개 중 3개를 뽑는다
+        -> 1 2 3 4 5 
+         */
+        private void solve(StringBuilder sb, String[] array) {
+            int end = Integer.parseInt(array[0]);
+            int count = Integer.parseInt(array[1]);
 
-            if (array[n] != -1) {
-                return array[n];
-            }
-            return fibonacci(record, n - 2) + fibonacci(record, n-1);
+
         }
 
         /*---------------------------------------------*/

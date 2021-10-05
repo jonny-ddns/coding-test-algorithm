@@ -1,4 +1,4 @@
-package baekjoon_online_judge.unsolved.q1003_피보나치함수;
+package baekjoon_online_judge.solved.q2869_달팽이는올라가고싶다;
 
 import java.io.*;
 
@@ -21,51 +21,35 @@ public class Main {
         //입출력
         private void execute() {
             try{
-                StringBuilder sb = new StringBuilder();
-                int count = Integer.parseInt(bufferedReader.readLine());
-                int turn = 0;
-                while(turn < count){
-                    solve(sb, bufferedReader.readLine());
-                    turn++;
-                }
-                bufferedWriter.write(sb.toString());
+                String[] input = bufferedReader.readLine().trim().split(" ");
+                bufferedWriter.write( Integer.toString(solve(input)) );
                 bufferedWriter.flush();
-                sb.setLength(0);
-            } catch (IOException ignored){
+            } catch (IOException io){
+                io.printStackTrace();
             } finally {
                 try {
                     resourceClose();
-                } catch (IOException ignored){
+                } catch (IOException io){
+                    io.printStackTrace();
                 }
             }
         }
 
         //연산
-        private void solve(StringBuilder sb, String input) {
-            int number = Integer.parseInt(input);
-            int[] record = new int[]{0, 0};
-            fibonacci(record, number);
-            sb.append(record[0])
-                .append(" ")
-                .append(record[1])
-                .append("\n");
-        }
+        private int solve(String[] input) {
+            int up = Integer.parseInt(input[0]);
+            int down = Integer.parseInt(input[1]);
+            int stick = Integer.parseInt(input[2]);
+            int actual = up - down;
+            int remain = stick - up;
+            int day;
 
-        private int fibonacci(int[] record, int n) {
-            if(n < 2){
-                record[n] = record[n] + 1;
-                return n;
+            if(remain % actual == 0){
+                day = remain / actual;
+            } else {
+                day = remain / actual + 1;
             }
-            int[] array = new int[n + 1];
-            int turn = 0;
-            while(turn < n+1){
-                array[turn++] = -1;
-            }
-
-            if (array[n] != -1) {
-                return array[n];
-            }
-            return fibonacci(record, n - 2) + fibonacci(record, n-1);
+            return ++day;
         }
 
         /*---------------------------------------------*/
