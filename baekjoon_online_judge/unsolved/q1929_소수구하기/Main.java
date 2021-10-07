@@ -1,4 +1,4 @@
-package baekjoon_online_judge.solved.q1193_분수찾기;
+package baekjoon_online_judge.q192_소수구하기;
 
 import java.io.*;
 
@@ -14,68 +14,54 @@ public class Main {
         private BufferedWriter bufferedWriter;
 
         private Solution() {
-//            resourceOpen();
-//            execute();
-            for(int i=1; i<21 ;i++){
-                calculate(i);
-//                System.out.println(i + " -> "+ find(i)[0] + " | "+ find(i)[1]);
-            }
+            resourceOpen();
+            execute();
         }
 
         //입출력
         private void execute() {
             try{
-                int index = Integer.parseInt(bufferedReader.readLine());
-                bufferedWriter.write(calculate(index));
+                StringBuilder sb = new StringBuilder();
+                String[] input = bufferedReader.readLine().split(" ");
+                solve(sb, input);
+                bufferedWriter.write( sb.toString());
                 bufferedWriter.flush();
-            } catch (IOException ignored){
+            } catch (IOException io){
+                io.printStackTrace();
             } finally {
                 try {
                     resourceClose();
-                } catch (IOException ignored){
+                } catch (IOException io){
+                    io.printStackTrace();
                 }
             }
         }
 
         //연산
-        private String calculate(int number) {
-            int[] array = find(number);
-//            int sum = array[0] +1;
-            int sum = array[0];
-            int index = sum - array[1];
-            int son;
-            int mom;
-
-
-            if(sum % 2 == 0){
-
-            } else {
-                index = array[1] + 1;
-            }
-
-
-            String result = sum + "/"+ index;
-            System.out.println(result);
-
-            return result;
-        }
-
-        private int[] find(int number){
-            number--;
-            int result = 1;
-            int n = 1;
-            int sum = 0;
-            boolean find = false;
-            while(!find){
-                sum = n * (n+1) / 2;
-                if(number < sum){
-                    result = n;
-                    find = true;
+        private void solve(StringBuilder sb, String[] input) {
+            int start = Integer.parseInt(input[0]);
+            int end = Integer.parseInt(input[1]);
+            for (int i = start; i <= end; i++) {
+                if (isPrime(i)) {
+                    sb.append(i).append("\n");
                 }
-                n++;
             }
-            return new int[]{result, sum - number};
         }
+
+        private boolean isPrime(int number){
+            if(number == 1){
+                return false;
+            }
+            int limit = number / 2;
+            int i;
+            for(i=2; i<=limit; i++){
+                if(number % i == 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+
 
         /*---------------------------------------------*/
         //자원할당
