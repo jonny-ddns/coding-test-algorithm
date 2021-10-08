@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q1676_팩토리얼0의개수;
+package baekjoon_online_judge.solved.q1676_팩토리얼0의개수;
 
 import java.io.*;
 
@@ -14,12 +14,6 @@ public class Main {
         private BufferedWriter bufferedWriter;
 
         private Solution() {
-//            for(int i=1; i<100; i++){
-//                System.out.print("i = " + i+ " ");
-//                long t = test(i);
-//                System.out.println(t);
-//
-//            }
             resourceOpen();
             execute();
         }
@@ -43,14 +37,10 @@ public class Main {
 
         //연산
         private int solve(int number) {
-            return number / 5;
-        }
-
-        private long test(int n){
-            if(n == 1){
-                return 1;
-            }
-            return n * test(n - 1);
+            int count = number / 5;
+            count += number / Math.pow(5, 2);
+            count += number / Math.pow(5, 3);
+            return count;
         }
 
         /*---------------------------------------------*/

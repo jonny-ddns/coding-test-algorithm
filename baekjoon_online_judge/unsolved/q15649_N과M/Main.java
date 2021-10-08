@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q15649_N°úM;
+package baekjoon_online_judge.unsolved.q15649_N°úM;
 
 import java.io.*;
 

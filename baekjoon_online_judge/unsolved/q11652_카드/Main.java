@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q11652_카드;
+package baekjoon_online_judge.unsolved.q11652_카드;
 
 import java.io.*;
 import java.util.*;

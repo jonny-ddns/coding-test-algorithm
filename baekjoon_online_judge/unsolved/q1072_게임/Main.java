@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q1072_게임;
+package baekjoon_online_judge.unsolved.q1072_게임;
 
 import java.io.*;
 

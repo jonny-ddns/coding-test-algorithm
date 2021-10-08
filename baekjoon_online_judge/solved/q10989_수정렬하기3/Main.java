@@ -1,4 +1,4 @@
-package baekjoon_online_judge.unsolved.q1929_소수구하기;
+package baekjoon_online_judge.solved.q10989_수정렬하기3;
 
 import java.io.*;
 
@@ -21,10 +21,18 @@ public class Main {
         //입출력
         private void execute() {
             try{
+                int[] countArray = new int[10001];
+                for (int i = 0; i < countArray.length - 1; i++) {
+                    countArray[i] = 0;
+                }
+                int count = Integer.parseInt(bufferedReader.readLine().trim());
+
                 StringBuilder sb = new StringBuilder();
-                String[] input = bufferedReader.readLine().split(" ");
-                solve(sb, input);
-                bufferedWriter.write( sb.toString());
+                for (int i = 0; i < count; i++) {
+                    int number = Integer.parseInt(bufferedReader.readLine().trim());
+                    arrayInsert(countArray, number);
+                }
+                bufferedWriter.write( arrayString(countArray, sb).toString() );
                 bufferedWriter.flush();
             } catch (IOException io){
                 io.printStackTrace();
@@ -37,31 +45,23 @@ public class Main {
             }
         }
 
-        //연산
-        private void solve(StringBuilder sb, String[] input) {
-            int start = Integer.parseInt(input[0]);
-            int end = Integer.parseInt(input[1]);
-            for (int i = start; i <= end; i++) {
-                if (isPrime(i)) {
-                    sb.append(i).append("\n");
-                }
-            }
+        private void arrayInsert(int[] array, int index) {
+            array[index] = array[index] + 1;
         }
 
-        private boolean isPrime(int number){
-            if(number == 1){
-                return false;
-            }
-            int limit = number / 2;
+        private StringBuilder arrayString(int[] array, StringBuilder sb){
+            int count;
             int i;
-            for(i=2; i<=limit; i++){
-                if(number % i == 0){
-                    return false;
+            for (i = 1; i < array.length; i++) {
+                count = array[i];
+                if(count != 0){
+                    for (int j = 0; j < count; j++) {
+                        sb.append(i).append("\n");
+                    }
                 }
             }
-            return true;
+            return sb;
         }
-
 
         /*---------------------------------------------*/
         //자원할당
