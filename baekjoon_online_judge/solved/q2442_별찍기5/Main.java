@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q0000_test;
+package baekjoon_online_judge.solved.q2442_별찍기5;
 
 import java.io.*;
 
@@ -14,9 +14,9 @@ public class Main {
 
     public Main() {
         try{
-            int count = Integer.parseInt(bufferedReader.readLine().trim());
-            String input = bufferedReader.readLine().trim();
-            bufferedWriter.write(solve(input));
+            bufferedWriter.write(
+                solve( Integer.parseInt(bufferedReader.readLine().trim()) ).toString()
+            );
         } catch (IOException io){
             io.printStackTrace();
         } finally {
@@ -28,8 +28,32 @@ public class Main {
         }
     }
 
-    private String solve(String input) {
-        return "Hello World!";
+    private StringBuilder solve(int number) throws IOException {
+        int width = width(number);
+        int blank = blank(width);
+
+        StringBuilder sb = new StringBuilder();
+        int star = 1;
+        while(blank >= 0){
+            starString(sb, star, blank--);
+            star = star + 2;
+        }
+        return sb;
+    }
+    private int width(int x){
+        return x * 2 - 1;
+    }
+    private int blank(int x){
+        return (x - 1) / 2;
+    }
+    private void starString(StringBuilder sb, int star, int blank) {
+        for (int i = 0; i < blank; i++) {
+            sb.append(' ');
+        }
+        for (int i = 0; i < star; i++) {
+            sb.append('*');
+        }
+        sb.append('\n');
     }
 
     //자원해제
