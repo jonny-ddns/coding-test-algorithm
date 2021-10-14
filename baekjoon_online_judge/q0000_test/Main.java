@@ -9,23 +9,21 @@ public class Main {
     private final BufferedWriter bufferedWriter = new BufferedWriter(writer);
 
     public static void main(String[] args) {
-        new Main();
+        new Main().start();
     }
 
-    public Main() {
-        try{
-            int count = Integer.parseInt(bufferedReader.readLine().trim());
-            String input = bufferedReader.readLine().trim();
-            bufferedWriter.write(solve(input));
-        } catch (IOException io){
-            io.printStackTrace();
-        } finally {
-            try {
-                resourceClose();
-            } catch (IOException io){
-                io.printStackTrace();
-            }
+    void start() {
+        try {
+            execute();
+        } catch (IOException ignored){
         }
+    }
+
+    private void execute() throws IOException {
+        int count = Integer.parseInt(bufferedReader.readLine().trim());
+        String input = bufferedReader.readLine().trim();
+        bufferedWriter.write(solve(input));
+        resourceClose();
     }
 
     private String solve(String input) {

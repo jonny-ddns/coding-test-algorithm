@@ -1,5 +1,5 @@
-package baekjoon_online_judge.solved.q1550_16Áø¼ö;
-
+package baekjoon_online_judge.solved.q1550_16;
+//16ì§„ìˆ˜
 import java.io.*;
 
 public class Main {
@@ -18,7 +18,7 @@ public class Main {
             execute();
         }
 
-        //ÀÔÃâ·Â
+        //ì…ì¶œë ¥
         private void execute() {
             try{
                 String input = bufferedReader.readLine().trim();
@@ -35,7 +35,7 @@ public class Main {
             }
         }
 
-        //¿¬»ê
+        //ì—°ì‚°
         private int solve(String input) {
             int square = 0;
             int sum = 0;
@@ -54,7 +54,7 @@ public class Main {
         }
 
         /*---------------------------------------------*/
-        //ÀÚ¿øÇÒ´ç
+        //ìì›í• ë‹¹
         private void resourceOpen(){
             reader = new InputStreamReader(System.in);
             writer = new OutputStreamWriter(System.out);
@@ -62,7 +62,7 @@ public class Main {
             bufferedWriter = new BufferedWriter(writer);
         }
 
-        //ÀÚ¿øÇØÁ¦
+        //ìì›í•´ì œ
         private void resourceClose() throws IOException {
             if (reader != null)             reader.close();
             if (writer != null)             writer.close();
