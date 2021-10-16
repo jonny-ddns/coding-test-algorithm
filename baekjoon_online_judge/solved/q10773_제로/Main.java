@@ -1,4 +1,4 @@
-package baekjoon_online_judge.q10773_제로;
+package baekjoon_online_judge.solved.q10773_제로;
 
 //stack 으로 쉽게 풀 수 있지만 배열을 적용하면
 //공간 및 시간을 줄일 수 있음
