@@ -1,6 +1,19 @@
 package codingGame.example.part02.p01_stock_exchange_losses;
 
 import java.io.*;
+/*
+6
+3 2 4 2 1 5
+-3
+
+6
+5 3 4 2 3 1
+-4
+
+5
+1 2 4 4 5
+0
+ */
 
 public class Test {
     private final Reader reader = new InputStreamReader(System.in);
@@ -19,17 +32,18 @@ public class Test {
         }
     }
 
+    //입출력
     private void execute() throws IOException {
-        int count = Integer.parseInt(bufferedReader.readLine().trim());
-        String[] input = bufferedReader.readLine().trim().split(" ");
+        int count       = Integer.parseInt(bufferedReader.readLine().trim());
+        String[] input  = bufferedReader.readLine().trim().split(" ");
         bufferedWriter.write(Integer.toString(solve(count, input)));
         resourceClose();
     }
 
+    //풀이
     private int solve(int count, String[] input) {
         int[] numbers = intArray(count, input);
-
-        return 0;
+        return calculate(numbers);
     }
 
     private int[] intArray(int count, String[] input){
@@ -38,6 +52,25 @@ public class Test {
             result[i] = Integer.parseInt(input[i]);
         }
         return result;
+    }
+
+    private int calculate(int[] numbers) {
+        int now;
+        int loss;
+        int highest = 0;
+        int record = 0;
+        int i;
+        for (i = 0; i < numbers.length; i++) {
+            now = numbers[i];
+            if(highest < now){
+                highest = now;
+            }
+            loss = now - highest;
+            if(Math.abs(record) < Math.abs(loss)){
+                record = loss;
+            }
+        }
+        return record;
     }
 
     //자원해제
