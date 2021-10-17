@@ -1,4 +1,4 @@
-package codingGame.example.part02.p01_stock_exchange_losses;
+package codingGame.example.part02.p02_there_is_no_spoon;
 
 import java.io.*;
 /*
@@ -15,14 +15,14 @@ import java.io.*;
 0
  */
 
-public class Test {
+public class Test01 {
     private final Reader reader = new InputStreamReader(System.in);
     private final Writer writer = new OutputStreamWriter(System.out);
     private final BufferedReader bufferedReader = new BufferedReader(reader);
     private final BufferedWriter bufferedWriter = new BufferedWriter(writer);
 
     public static void main(String[] args) {
-        new Test().start();
+        new Test01().start();
     }
 
     private void start() {
@@ -43,7 +43,7 @@ public class Test {
     //Ç®ÀÌ
     private int solve(int count, String[] input) {
         int[] numbers = intArray(count, input);
-        return calculate(numbers);
+        return min(numbers);
     }
 
     private int[] intArray(int count, String[] input){
@@ -54,7 +54,7 @@ public class Test {
         return result;
     }
 
-    private int calculate(int[] numbers) {
+    private int min(int[] numbers) {
         int now;
         int loss;
         int highest = 0;
